@@ -5,4 +5,5 @@ const listEl = document.querySelector("#ulEL");
 addBtn.addEventListener("click", function () {
   const inputValue = inputEl.value;
   listEl.innerHTML += `<li>${inputValue}</li>`;
+  inputEl.value = "";
 });
