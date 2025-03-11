@@ -1,0 +1,38 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eef0f4;
+  color: #432000;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  max-width: 320px;
+}
+
+img {
+  margin: 0 auto;
+  width: 150px;
+}
+
+input {
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  color: #432000;
+  background-color: #dce1eb;
+  border: none;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+button {
+  padding: 15px;
+  border-radius: 5px;
+  color: #fdfdfd;
+  background-color: #ac485a;
+  border: none;
+  font-size: 15px;
+}
