@@ -2,6 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebas
 import {
   getDatabase,
   ref,
+  push,
+  onValue,
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
 
 const appSettings = {
@@ -16,8 +18,23 @@ const inputEl = document.querySelector("#input-el");
 const addBtn = document.querySelector("#add-btn");
 const listEl = document.querySelector("#ulEL");
 
+function appendListItems(item) {
+  console.log(item);
+  listEl.innerHTML += `<li>${item}</li>`;
+}
+
+onValue(shoppingListInDB, function (snapshot) {
+  let itemArray = Object.values(snapshot.val());
+  listEl.innerHTML = "";
+
+  for (let i = 0; i < itemArray.length; i++) {
+    // console.log(itemArray[i]);
+    appendListItems(itemArray[i]);
+  }
+});
+
 addBtn.addEventListener("click", function () {
   const inputValue = inputEl.value;
-  listEl.innerHTML += `<li>${inputValue}</li>`;
+  push(shoppingListInDB, inputValue);
   inputEl.value = "";
 });
