@@ -19,7 +19,6 @@ const addBtn = document.querySelector("#add-btn");
 const listEl = document.querySelector("#ulEL");
 
 function appendListItems(item) {
-  console.log(item);
   listEl.innerHTML += `<li>${item}</li>`;
 }
 
@@ -28,7 +27,6 @@ onValue(shoppingListInDB, function (snapshot) {
   listEl.innerHTML = "";
 
   for (let i = 0; i < itemArray.length; i++) {
-    // console.log(itemArray[i]);
     appendListItems(itemArray[i]);
   }
 });
