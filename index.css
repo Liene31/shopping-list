@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #eddfe0;
   color: #432000;
+  font-family: "Emilys Candy", serif;
 }
 .container {
   display: flex;
@@ -25,7 +26,8 @@ input {
   background-color: #dce1eb;
   border: none;
   margin: 5px 0;
-  font-size: 15px;
+  font-size: 16px;
+  font-family: "Emilys Candy", serif;
 }
 
 button {
@@ -34,8 +36,10 @@ button {
   color: #fdfdfd;
   background-color: #ac485a;
   border: none;
-  font-size: 15px;
+  font-size: 16px;
+
   cursor: pointer;
+  font-family: "Emilys Candy", serif;
 }
 
 button:hover {
@@ -52,7 +56,8 @@ ul {
 }
 
 ul li {
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 500;
   background-color: #fffdf8;
   padding: 15px;
   border-radius: 8px;
