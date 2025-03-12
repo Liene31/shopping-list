@@ -53,3 +53,12 @@ addBtn.addEventListener("click", function () {
   push(shoppingListInDB, inputValue);
   inputEl.value = "";
 });
+
+inputEl.addEventListener("keypress", function (event) {
+  // Checking if key pressed is ENTER or not
+  // if the key pressed is ENTER
+  // click listener on button is called
+  if (event.keyCode == 13) {
+    addBtn.click();
+  }
+});
